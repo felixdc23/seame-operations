@@ -1,4 +1,4 @@
-package br.gov.casadamoeda.seame;
+package br.gov.casadamoeda.seame.bankslips;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,9 +11,9 @@ public class Slip {
         this.entries.add(line);
     }
 
-    public void DdBankSlip() {
-        this.entries.forEach(System.out::println);
-    }
+//    public void DdBankSlip() {
+//        this.entries.forEach(System.out::println);
+//    }
 
     public List<String> GetCsv() {
 

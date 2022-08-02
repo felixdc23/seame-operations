@@ -1,14 +1,14 @@
 package br.gov.casadamoeda.seame;
 
+import br.gov.casadamoeda.seame.bankslips.Operator;
+
 public class Main {
     public static void main(String[] args) {
 
-//        System.out.println("Hello world!");
+        Operator operator = new Operator("boletos.txt");
 
-        Operator extrato = new Operator("boletos.txt");
+        operator.loadBankSlip();
 
-        extrato.loadBankSlip();
-
-        extrato.printBankSlipCSV();
+        operator.printBankSlipCSV();
     }
 }

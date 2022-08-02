@@ -1,16 +1,11 @@
-package br.gov.casadamoeda.seame;
+package br.gov.casadamoeda.seame.bankslips;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class Converter {
-
-    private String[] line;
     private String csvLine;
 
     public Converter() {
@@ -22,7 +17,7 @@ public class Converter {
             return false;
         }
         try {
-            double d = Double.parseDouble(s);
+            Double.parseDouble(s);
             return true;
         } catch (NumberFormatException nfe) {
             return false;
@@ -30,7 +25,7 @@ public class Converter {
     }
 
     private String ApplyCsvFormat(String line) {
-        String formatLine = "";
+        String formatLine;
 
         if (CheckNumeric(line)) {
             formatLine = line;
@@ -42,9 +37,9 @@ public class Converter {
     }
 
     private String ConvertToCsv(String line) {
-        
-        String tmpLine[] = {"0", "", line};
-        
+
+        String[] tmpLine = {"0", "", line};
+
         return ConvertStringToCsv(tmpLine);
     }
 
@@ -53,7 +48,7 @@ public class Converter {
             StringBuilder sb = new StringBuilder(line[1]);
 
             List<String> tmpLine = new ArrayList<>(Arrays.stream(line[2].split(" ")).toList());
-            String[] tmpArray = {"","",""};
+            String[] tmpArray = {"", "", ""};
 
             if (line[0].equals("0")) {
                 tmpArray[1] = ApplyCsvFormat(tmpLine.remove(0));
@@ -68,10 +63,6 @@ public class Converter {
                 sb.append(ApplyCsvFormat(name));
 
                 tmpArray[1] = sb.toString();
-
-                Pattern pattern = Pattern.compile("^\\D*(\\d)");
-                Matcher matcher = pattern.matcher(line[2]);
-                matcher.find();
                 tmpArray[2] = line[2].substring(name.length() + 1);
                 for (String item : tmpLine) {
                     if (CheckNumeric(item.substring(0, 1))) {

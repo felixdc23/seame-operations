@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6292bf38-d08c-47dd-a187-9b77ba60660d" name="Changes" comment="First commit">
+    <list default="true" id="6292bf38-d08c-47dd-a187-9b77ba60660d" name="Changes" comment="First project cleaning a restructuring.">
       <change afterPath="$PROJECT_DIR$/data/boletos.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/boletos2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/gov/casadamoeda/seame/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/gov/casadamoeda/seame/bankslips/Converter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/gov/casadamoeda/seame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/gov/casadamoeda/seame/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/gov/casadamoeda/seame/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/gov/casadamoeda/seame/bankslips/Operator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/gov/casadamoeda/seame/Slip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/gov/casadamoeda/seame/bankslips/Slip.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1659367892500</updated>
       <workItem from="1659367894299" duration="15470000" />
-      <workItem from="1659444047492" duration="27396000" />
+      <workItem from="1659444047492" duration="27748000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1659473146634</created>
@@ -108,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659473146634</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="First project cleaning a restructuring.">
+      <created>1659477402631</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1659477402631</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,7 +131,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+    <MESSAGE value="First project cleaning a restructuring." />
+    <option name="LAST_COMMIT_MESSAGE" value="First project cleaning a restructuring." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/lista_boletos$Main.ic" NAME="Main Coverage Results" MODIFIED="1659468777623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
