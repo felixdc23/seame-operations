@@ -1,7 +1,7 @@
 package br.gov.casadamoeda.seame.bankslips;
 
-import java.io.FileReader;
-import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class Operator {
@@ -12,27 +12,42 @@ public class Operator {
         this.filename = filename;
     }
 
-    public void loadBankSlip() {
-        try (BufferedReader br = new BufferedReader(new FileReader("data/" + this.filename))) {
-
-            String line = br.readLine();
-
-            while (line != null) {
-                this.bankSlip.AddLine(line);
-                line = br.readLine();
-            }
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
 //    public void printBankSlip() {
 //        this.bankSlip.DdBankSlip();
 //    }
 
-    public void printBankSlipCSV() {
+    public void LoadBankSlip() {
+        this.bankSlip.ExtractLines(this.filename);
+    }
+
+    public void PrintBankSlipCSV() {
         this.bankSlip.GetCsv().forEach(System.out::println);
+    }
+
+    public void CreateCsvFile() {
+        if (!this.bankSlip.GetCsv().isEmpty()) {
+            try {
+                File file = new File("output/" + this.filename + ".csv");
+                if (file.createNewFile()) {
+                    FileWriter fileWriter = new FileWriter(file);
+                    this.bankSlip.GetCsv().forEach(s -> {
+                        try {
+                            StringBuilder sb = new StringBuilder(s);
+                            sb.append(System.getProperty("line.separator"));
+                            fileWriter.write(sb.toString());
+                            System.out.println(sb);
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                    });
+                } else {
+                    System.out.println("File already exists.");
+                }
+            } catch (IOException e) {
+                System.out.println("An error occurred.");
+                e.printStackTrace();
+            }
+        }
     }
 
 }

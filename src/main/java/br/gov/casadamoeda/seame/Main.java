@@ -5,10 +5,12 @@ import br.gov.casadamoeda.seame.bankslips.Operator;
 public class Main {
     public static void main(String[] args) {
 
-        Operator operator = new Operator("boletos.txt");
+        Operator operator = new Operator("boletos-20220802.txt");
 
-        operator.loadBankSlip();
+        operator.LoadBankSlip();
 
-        operator.printBankSlipCSV();
+        operator.PrintBankSlipCSV();
+
+        operator.CreateCsvFile();
     }
 }
