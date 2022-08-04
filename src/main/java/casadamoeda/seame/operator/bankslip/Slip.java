@@ -1,4 +1,6 @@
-package br.gov.casadamoeda.seame.bankslips;
+package casadamoeda.seame.operator.bankslip;
+
+import casadamoeda.seame.util.Converter;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -18,9 +20,8 @@ public class Slip {
 //        this.entries.forEach(System.out::println);
 //    }
 
-    public void ExtractLines(String filename) {
+    protected void ExtractLines(String filename) {
         try (BufferedReader br = new BufferedReader(new FileReader("data/" + filename))) {
-
             String line = br.readLine();
 
             while (line != null) {

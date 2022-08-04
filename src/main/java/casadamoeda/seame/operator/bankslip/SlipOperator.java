@@ -1,20 +1,17 @@
-package br.gov.casadamoeda.seame.bankslips;
+package casadamoeda.seame.operator.bankslip;
+
+import casadamoeda.seame.operator.Operator;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Operator {
-    private final String filename;
-    private final Slip bankSlip = new Slip();
+public class SlipOperator extends Operator {
+    private Slip bankSlip = new Slip();
 
-    public Operator(String filename) {
-        this.filename = filename;
+    public SlipOperator(String filename) {
+        super(filename);
     }
-
-//    public void printBankSlip() {
-//        this.bankSlip.DdBankSlip();
-//    }
 
     public void LoadBankSlip() {
         this.bankSlip.ExtractLines(this.filename);
@@ -24,10 +21,10 @@ public class Operator {
         this.bankSlip.GetCsv().forEach(System.out::println);
     }
 
-    public void CreateCsvFile() {
+    public void CreateBankslipCsvFile() {
         if (!this.bankSlip.GetCsv().isEmpty()) {
             try {
-                File file = new File("output/" + this.filename + ".csv");
+                File file = new File("output/" + this.filename.substring(0, this.filename.length() - 4) + ".csv");
                 if (file.createNewFile()) {
                     FileWriter fileWriter = new FileWriter(file);
                     this.bankSlip.GetCsv().forEach(s -> {
@@ -49,5 +46,4 @@ public class Operator {
             }
         }
     }
-
 }

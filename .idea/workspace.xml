@@ -4,13 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6292bf38-d08c-47dd-a187-9b77ba60660d" name="Changes" comment="First project cleaning a restructuring.">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="6292bf38-d08c-47dd-a187-9b77ba60660d" name="Changes" comment="Add create csv file function.&#10;Other minor changes.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/Operator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/order/Header.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/order/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/order/OrderList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/order/OrderOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/gov/casadamoeda/seame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/gov/casadamoeda/seame/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/gov/casadamoeda/seame/bankslips/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/gov/casadamoeda/seame/bankslips/Converter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/gov/casadamoeda/seame/bankslips/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/gov/casadamoeda/seame/bankslips/Operator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/gov/casadamoeda/seame/bankslips/Slip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/gov/casadamoeda/seame/bankslips/Slip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/gov/casadamoeda/seame/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/gov/casadamoeda/seame/bankslips/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/Converter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/gov/casadamoeda/seame/bankslips/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/bankslip/SlipOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/gov/casadamoeda/seame/bankslips/Slip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/bankslip/Slip.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +29,35 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lista-boletos" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lista-boletos" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -48,21 +81,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/daniel/Projects/lista-boletos/data&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
+    "last_opened_file_path": "/home/daniel/Projects/lista-boletos/src/main/java/br/gov/casadamoeda/seame/operator",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "advanced.settings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/data" />
@@ -72,16 +107,20 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="br.gov.casadamoeda.seame.util" />
+      <recent name="br.gov.casadamoeda.seame.operator" />
+      <recent name="br.gov.casadamoeda.seame.bankslip" />
+      <recent name="br.gov.casadamoeda.seame" />
       <recent name="br.gov.casadamoeda.seame.bankslips" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.gov.casadamoeda.seame.Main" />
+    <configuration name="casadamoeda.seame.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="casadamoeda.seame.Main" />
       <module name="lista-boletos.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.gov.casadamoeda.seame.bankslips.*" />
+          <option name="PATTERN" value="br.gov.casadamoeda.seame.bankslip.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,7 +130,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.casadamoeda.seame.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -105,7 +144,8 @@
       <updated>1659367892500</updated>
       <workItem from="1659367894299" duration="15470000" />
       <workItem from="1659444047492" duration="28104000" />
-      <workItem from="1659526549444" duration="6336000" />
+      <workItem from="1659526549444" duration="7004000" />
+      <workItem from="1659619369083" duration="14455000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1659473146634</created>
@@ -128,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659477948496</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add create csv file function.&#10;Other minor changes.">
+      <created>1659542491749</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1659542491749</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,21 +195,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
     <MESSAGE value="First project cleaning a restructuring." />
-    <option name="LAST_COMMIT_MESSAGE" value="First project cleaning a restructuring." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/gov/casadamoeda/seame/bankslips/Converter.java</url>
-          <line>79</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Add create csv file function.&#10;Other minor changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add create csv file function.&#10;Other minor changes." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/lista_boletos$Main.ic" NAME="Main Coverage Results" MODIFIED="1659468777623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

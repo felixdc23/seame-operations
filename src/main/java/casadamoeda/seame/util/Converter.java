@@ -1,4 +1,4 @@
-package br.gov.casadamoeda.seame.bankslips;
+package casadamoeda.seame.util;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -57,8 +57,7 @@ public class Converter {
                 ConvertStringToCsv(tmpArray);
             } else {
                 if (line[0].equals("1")) {
-                    String name = tmpLine.stream().takeWhile(s -> !CheckNumeric(s.substring(0, 1)))
-                            .collect(Collectors.joining(" "));
+                    String name = tmpLine.stream().takeWhile(s -> !CheckNumeric(s.substring(0, 1))).collect(Collectors.joining(" "));
 
                     sb.append(";");
                     sb.append(ApplyCsvFormat(name));
@@ -78,9 +77,7 @@ public class Converter {
                     tmpArray[0] = String.valueOf(Integer.parseInt(line[0]) + 1);
                     String insertValue = tmpLine.remove(0);
 
-                    if (insertValue.contains(",")
-                            && sb.toString().chars().filter(ch -> ch == '/').count() < 3
-                            && !sb.toString().contains(";;")) {
+                    if (insertValue.contains(",") && sb.toString().chars().filter(ch -> ch == '/').count() < 3 && !sb.toString().contains(";;")) {
                         sb.append(";");
                     }
                     sb.append(ApplyCsvFormat(insertValue));
