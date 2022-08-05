@@ -1,6 +1,6 @@
 package casadamoeda.seame.operator;
 
-public class Operator {
+public abstract class Operator {
     protected String filename;
     public Operator(String filename) {
         this.filename = filename;
