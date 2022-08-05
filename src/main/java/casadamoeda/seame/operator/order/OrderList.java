@@ -7,8 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class OrderList {
-    private Header header = new Header();
-    private List<Order> orders = new ArrayList<>();
+    private final List<Order> orders = new ArrayList<>();
 
     private void AddOrder(Order order) {
         this.orders.add(order);
@@ -37,7 +36,7 @@ public class OrderList {
         if (!this.orders.isEmpty()) {
             return this.orders.get(0).toString();
         } else {
-            return "Orders not loaded.";
+            return null;
         }
     }
 }

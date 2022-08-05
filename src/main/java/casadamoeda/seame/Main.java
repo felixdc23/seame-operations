@@ -10,12 +10,14 @@ public class Main {
 
         bankslipOperator.LoadBankSlip();
 
-        bankslipOperator.PrintBankSlipCSV();
+//        bankslipOperator.PrintBankSlipCSV();
+
+        bankslipOperator.CreateBankslipCsvFile();
 
         OrderOperator orderOperator = new OrderOperator("Pedidos_CM_2022_08_04.csv");
 
         orderOperator.LoadOrders();
 
-        orderOperator.PrintOrderList();
+//        orderOperator.PrintOrderList();
     }
 }

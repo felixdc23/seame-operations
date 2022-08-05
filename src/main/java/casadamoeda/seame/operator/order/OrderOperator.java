@@ -3,7 +3,7 @@ package casadamoeda.seame.operator.order;
 import casadamoeda.seame.operator.Operator;
 
 public class OrderOperator extends Operator {
-    private OrderList orders = new OrderList();
+    private final OrderList orders = new OrderList();
 
     public OrderOperator(String filename) {
         super(filename);
@@ -14,8 +14,11 @@ public class OrderOperator extends Operator {
     }
 
     public void PrintOrderList() {
-
         this.orders.GetOrderList().forEach(System.out::println);
+    }
+
+    public String GetHeader() {
+        return this.orders.GetHeader();
     }
 
 }
