@@ -9,9 +9,9 @@ public class SlipOperator extends Operator {
         super(filename);
         int length = super.filename.length();
         if (super.filename.startsWith(".csv", length - 4)){
-            this.bankTextSlip = new CsvSlip();
+            this.bankTextSlip = new SlipCsv();
         } else if (super.filename.startsWith(".txt", length - 4)){
-            this.bankTextSlip = new TxtSlip();
+            this.bankTextSlip = new SlipTxt();
         }
     }
 

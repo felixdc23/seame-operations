@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class TxtSlip extends Slip {
+public class SlipTxt extends Slip {
     @Override
     protected void GenerateFile(String filename) {
         Converter converter = new Converter();
