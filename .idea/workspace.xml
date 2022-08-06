@@ -4,8 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6292bf38-d08c-47dd-a187-9b77ba60660d" name="Changes" comment="Renamed for standardization">
-      <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/Operator.java" afterDir="false" />
+    <list default="true" id="6292bf38-d08c-47dd-a187-9b77ba60660d" name="Changes" comment="Details">
+      <change afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/bankslip/Slip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/order/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/order/OrderList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/ExtractLines.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/Merger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/operator/ListItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/operator/OperatorList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/operator/Operator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/bankslip/Slip.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/bankslip/SlipCsv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/bankslip/SlipCsv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/bankslip/SlipOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/bankslip/SlipOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/bankslip/SlipTxt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/bankslip/SlipTxt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/order/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/order/OrderList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/order/OrderOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/order/OrderOperator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +61,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -139,7 +155,10 @@
       <workItem from="1659619369083" duration="15371000" />
       <workItem from="1659662162484" duration="178000" />
       <workItem from="1659664729244" duration="7246000" />
-      <workItem from="1659672452290" duration="502000" />
+      <workItem from="1659672452290" duration="780000" />
+      <workItem from="1659700205624" duration="8399000" />
+      <workItem from="1659716448414" duration="16000" />
+      <workItem from="1659717862283" duration="16204000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1659473146634</created>
@@ -190,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659672690552</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Details">
+      <created>1659673219881</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1659673219881</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +240,8 @@
     <MESSAGE value="Major change in project structure&#10;Generalization of the Operator class&#10;Created Order package" />
     <MESSAGE value="More changes in project structure.&#10;Generalizations." />
     <MESSAGE value="Renamed for standardization" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renamed for standardization" />
+    <MESSAGE value="Details" />
+    <option name="LAST_COMMIT_MESSAGE" value="Details" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/lista_boletos$Main.ic" NAME="Main Coverage Results" MODIFIED="1659468777623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
