@@ -2,13 +2,7 @@ package casadamoeda.seame.operator;
 
 import casadamoeda.seame.util.LineExtractor;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class ItemList {
     protected final ArrayList<ListItem> items = new ArrayList<>();
@@ -24,13 +18,14 @@ public class ItemList {
     }
 
     public ArrayList<String> RemoveDuplicates(ArrayList<String> list) {
-        Set<String> set = new HashSet<>(list);
+        String header = list.get(0);
 
-        list.clear();
+        HashSet<String> set = new HashSet<>(list);
 
-        list.addAll(set);
+        ArrayList<String> tmpList = new ArrayList<>(set.stream().toList());
+        Collections.swap(tmpList, tmpList.indexOf(header), 0);
 
-        return list;
+        return tmpList;
     }
 
     protected ListItem GetHeader() {
@@ -41,28 +36,12 @@ public class ItemList {
         }
     }
 
-    protected void GenerateFile(String filename) {
-        if (!this.items.isEmpty()) {
-            try {
-                File file = new File("output/" + filename.substring(0, filename.length() - 4) + ".csv");
-                if (file.createNewFile()) {
-                    FileWriter fileWriter = new FileWriter(file);
-                    this.items.forEach(s -> {
-                        try {
-                            fileWriter.write(s + System.getProperty("line.separator"));
-                        } catch (IOException e) {
-                            throw new RuntimeException(e);
-                        }
-                    });
-                    fileWriter.close();
-                } else {
-                    System.out.println("File already exists.");
-                }
-            } catch (IOException e) {
-                System.out.println("An error occurred.");
-                e.printStackTrace();
-            }
-        }
+    protected ArrayList<String> GetItemList() {
+        return new ArrayList<>(this.items.stream().map(ListItem::toString).toList());
+    }
+
+    protected void AddItem(int index, ListItem item) {
+        this.items.add(index, item);
     }
 
 }

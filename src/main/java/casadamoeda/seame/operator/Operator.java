@@ -1,20 +1,26 @@
 package casadamoeda.seame.operator;
 
+import casadamoeda.seame.util.CsvFileCreator;
+
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
 
 public class Operator {
-    private final String filename;
+    public final String filepath;
+    public final String filename;
 
     private final ItemList itemList = new ItemList();
 
-    public Operator(String filename) {
+    public Operator(String path, String filename) {
+        this.filepath = path;
         this.filename = filename;
     }
 
-    public void LoadOrders() {
-        this.itemList.LoadItemList(this.filename);
+    public void LoadItems() {
+        this.itemList.LoadItemList(this.filepath + this.filename);
+    }
+
+    public void AddHeader(String header) {
+        this.itemList.AddItem(0, new ListItem(header));
     }
 
     public void PrintItemList() {
@@ -26,7 +32,8 @@ public class Operator {
     }
 
     public void CreateCsvFile() {
-        this.itemList.GenerateFile(this.filename);
+        CsvFileCreator csv = new CsvFileCreator("staging/", this.filename, this.itemList.GetItemList());
+        csv.GenerateFile();
     }
 
 }

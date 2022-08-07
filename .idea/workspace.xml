@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6292bf38-d08c-47dd-a187-9b77ba60660d" name="Changes" comment="Improvements and simplifications.&#10;Merger working.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/CsvFileCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/ItemList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/ItemList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/Operator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/LineExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/LineExtractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/Merger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/Merger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/Merger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/TableMerger.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +89,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager"
@@ -151,6 +153,7 @@
       <workItem from="1659795038994" duration="51000" />
       <workItem from="1659833248174" duration="10807000" />
       <workItem from="1659844066579" duration="4413000" />
+      <workItem from="1659882606437" duration="14510000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1659473146634</created>
@@ -250,17 +253,6 @@
     <MESSAGE value="Merging ongoing" />
     <MESSAGE value="Improvements and simplifications.&#10;Merger working." />
     <option name="LAST_COMMIT_MESSAGE" value="Improvements and simplifications.&#10;Merger working." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/Merger.java</url>
-          <line>84</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/lista_boletos$Main.ic" NAME="Main Coverage Results" MODIFIED="1659468777623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

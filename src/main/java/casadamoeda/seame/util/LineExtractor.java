@@ -1,7 +1,5 @@
 package casadamoeda.seame.util;
 
-import casadamoeda.seame.operator.ListItem;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -11,9 +9,15 @@ public class LineExtractor {
     private final ArrayList<String> list = new ArrayList<>();
     String filename;
 
+    public LineExtractor() {}
+
     public LineExtractor(String filename) {
         this.filename = filename;
-        LoadExtractedLines(this.filename);
+        ExtractLines(this.filename);
+    }
+
+    public void ExtractLines(String filename) {
+        LoadExtractedLines(filename);
     }
 
     public ArrayList<String> GetExtractedLines() {
@@ -26,7 +30,7 @@ public class LineExtractor {
     }
 
     private void LoadExtractedLines(String filename) {
-        try (BufferedReader br = new BufferedReader(new FileReader("data/" + filename))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
             String line = br.readLine();
 
             while (line != null) {

@@ -6,9 +6,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Merger {
-    Table leftTable;
-    Table rightTable;
+public class TableMerger {
+    private final Table leftTable;
+    private final Table rightTable;
+    private ArrayList<String> merged = new ArrayList<>();
 
     private static class Table {
         private final ArrayList<String> headers = new ArrayList<>();
@@ -42,7 +43,7 @@ public class Merger {
         }
     }
 
-    public Merger(ArrayList<ListItem> table1, ArrayList<ListItem> table2) {
+    public TableMerger(ArrayList<ListItem> table1, ArrayList<ListItem> table2) {
         this.leftTable = new Table(table1);
 
         this.rightTable = new Table(table2);
@@ -68,7 +69,7 @@ public class Merger {
         }
     }
 
-    public void Merge(int colA, int colB) {
+    public ArrayList<String> Merge(int colA, int colB) {
         ArrayList<String> merged = new ArrayList<>();
 
         StringBuilder sb = new StringBuilder();
@@ -79,7 +80,7 @@ public class Merger {
 
         merged.add(sb.toString());
 
-        this.leftTable.table.stream().forEach(itemA -> this.rightTable.table.stream().forEach(itemB -> {
+        this.leftTable.table.stream().skip(1).forEach(itemA -> this.rightTable.table.stream().skip(1).forEach(itemB -> {
             sb.setLength(0);
 
             if (itemA.GetItems().get(colA).replace("\"", "").equals(itemB.GetItems().get(colB).replace("\"", "").substring(11, 17))) {
@@ -90,7 +91,13 @@ public class Merger {
             }
         }));
 
-        merged.forEach(System.out::println);
+//        merged.forEach(System.out::println);
+        return this.merged = new ArrayList<>(merged);
+    }
+
+    public ArrayList<String> GetMerged() {
+        return this.merged;
     }
 
 }
+

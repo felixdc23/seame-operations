@@ -42,5 +42,9 @@ bin/
 .DS_Store
 
 ## Data files ##
-/data/
-/output/
+/data/*
+/output/*
+/staging/*
+
+## Personal annotations ##
+todo.txt
