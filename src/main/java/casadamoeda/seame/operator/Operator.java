@@ -1,6 +1,8 @@
 package casadamoeda.seame.operator;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Operator {
     private final String filename;

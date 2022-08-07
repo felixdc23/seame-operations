@@ -6,13 +6,31 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class ItemList {
     protected final ArrayList<ListItem> items = new ArrayList<>();
 
     public void LoadItemList(String filename) {
-        LineExtractor items = new LineExtractor(filename);
-        this.items.addAll(items.GetExtractedLines());
+        LineExtractor extractor = new LineExtractor(filename);
+
+        ArrayList<String> lines = extractor.GetExtractedLines();
+
+        lines = RemoveDuplicates(lines);
+
+        lines.forEach(s -> this.items.add(new ListItem(s)));
+    }
+
+    public ArrayList<String> RemoveDuplicates(ArrayList<String> list) {
+        Set<String> set = new HashSet<>(list);
+
+        list.clear();
+
+        list.addAll(set);
+
+        return list;
     }
 
     protected ListItem GetHeader() {

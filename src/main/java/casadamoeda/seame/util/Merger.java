@@ -79,7 +79,7 @@ public class Merger {
 
         merged.add(sb.toString());
 
-        this.leftTable.table.stream().skip(1).forEach(itemA -> this.rightTable.table.stream().skip(1).forEach(itemB -> {
+        this.leftTable.table.stream().forEach(itemA -> this.rightTable.table.stream().forEach(itemB -> {
             sb.setLength(0);
 
             if (itemA.GetItems().get(colA).replace("\"", "").equals(itemB.GetItems().get(colB).replace("\"", "").substring(11, 17))) {

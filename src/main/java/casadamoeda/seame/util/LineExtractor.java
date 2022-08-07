@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class LineExtractor {
-    private final ArrayList<ListItem> list = new ArrayList<>();
+    private final ArrayList<String> list = new ArrayList<>();
     String filename;
 
     public LineExtractor(String filename) {
@@ -16,7 +16,7 @@ public class LineExtractor {
         LoadExtractedLines(this.filename);
     }
 
-    public ArrayList<ListItem> GetExtractedLines() {
+    public ArrayList<String> GetExtractedLines() {
         if (!this.list.isEmpty()) {
             return this.list;
         } else {
@@ -34,8 +34,7 @@ public class LineExtractor {
                     CsvConverter converter = new CsvConverter();
                     line = converter.GetCsv(line);
                 }
-                ListItem item = new ListItem(line);
-                AddItem(item);
+                this.list.add(line);
                 line = br.readLine();
             }
         } catch (IOException e) {
@@ -45,7 +44,4 @@ public class LineExtractor {
         System.out.println("Lines extracted.");
     }
 
-    private void AddItem(ListItem item) {
-        this.list.add(item);
-    }
 }
