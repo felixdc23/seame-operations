@@ -1,10 +1,10 @@
 package casadamoeda.seame.util;
 
-import casadamoeda.seame.util.operator.ListItem;
-import casadamoeda.seame.util.operator.OperatorList;
+import casadamoeda.seame.operator.ListItem;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Merger {
     Table leftTable;
@@ -24,17 +24,15 @@ public class Merger {
             this.headers.addAll(Arrays.stream(this.table.get(0).toString().split(";")).toList());
         }
 
-        protected void SelectHeaders(Integer[] intList) {
+        protected void AddSelectedHeaders(Integer[] intList) {
             this.selectedColumns.addAll(Arrays.stream(intList).toList());
-        }
-
-        protected ArrayList<ListItem> GetRows() {
-            return this.table;
         }
 
         public void PrintTable() {
             System.out.println("Headers:");
-            this.headers.forEach(s -> System.out.println(s.indexOf(s) + " " + s));
+
+            final AtomicInteger count = new AtomicInteger();
+            this.headers.forEach(s -> System.out.println(count.incrementAndGet() - 1 + " - " + s.replace("\"", "")));
 
             System.out.println("Rows:");
             this.table.forEach(System.out::println);
@@ -50,12 +48,24 @@ public class Merger {
         this.rightTable = new Table(table2);
     }
 
-    public void PrintTableA() {
-        this.leftTable.PrintTable();
+    public void PrintTable(String table) {
+        if (table.equalsIgnoreCase("A")) {
+            this.leftTable.PrintTable();
+        } else if (table.equalsIgnoreCase("B")) {
+            this.rightTable.PrintTable();
+        } else {
+            System.out.println("Invalid table");
+        }
     }
 
-    public void PrintTableB() {
-        this.rightTable.PrintTable();
+    public void SelectHeaders(String table, Integer[] headers) {
+        if (table.equalsIgnoreCase("A")) {
+            this.leftTable.AddSelectedHeaders(headers);
+        } else if (table.equalsIgnoreCase("B")) {
+            this.rightTable.AddSelectedHeaders(headers);
+        } else {
+            System.out.println("Invalid table");
+        }
     }
 
     public void Merge(int colA, int colB) {
@@ -63,26 +73,24 @@ public class Merger {
 
         StringBuilder sb = new StringBuilder();
 
-        sb.append(this.leftTable.headers.get(colA)).append("-").append(this.leftTable.headers.get(colB));
-        sb.append(String.join(";", this.leftTable.headers)).append(";");
-        sb.append(String.join(";", this.rightTable.headers));
+//        sb.append(this.leftTable.headers.get(colA)).append("-").append(this.leftTable.headers.get(colB));
+        leftTable.selectedColumns.forEach(s -> sb.append(leftTable.headers.get(s)).append(";"));
+        rightTable.selectedColumns.forEach(s -> sb.append(rightTable.headers.get(s)).append(";"));
+
         merged.add(sb.toString());
 
-        this.leftTable.table.forEach(itemA -> {
-            this.rightTable.table.forEach(itemB -> {
-                if (itemA.GetItems().get(colA).equals(itemB.GetItems().get(colB))) {
-                    sb.setLength(0);
-                    sb.append(itemA.GetItems().get(colA));
-                    leftTable.selectedColumns.forEach(col -> {
-                        sb.append(";").append(itemA.GetItems().get(col));
-                    });
-                    rightTable.selectedColumns.forEach(col -> {
-                        sb.append(";").append(itemA.GetItems().get(col));
-                    });
-                }
-            });
-        });
-        merged.add(sb.toString());
+        this.leftTable.table.stream().skip(1).forEach(itemA -> this.rightTable.table.stream().skip(1).forEach(itemB -> {
+            sb.setLength(0);
+
+            if (itemA.GetItems().get(colA).replace("\"", "").equals(itemB.GetItems().get(colB).replace("\"", "").substring(11, 17))) {
+//                    sb.append(itemA.GetItems().get(colA));
+                leftTable.selectedColumns.forEach(col -> sb.append(itemA.GetItems().get(col)).append(";"));
+                rightTable.selectedColumns.forEach(col -> sb.append(itemB.GetItems().get(col)).append(";"));
+                merged.add(sb.toString());
+            }
+        }));
+
+        merged.forEach(System.out::println);
     }
 
 }

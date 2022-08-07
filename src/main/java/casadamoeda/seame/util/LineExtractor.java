@@ -1,17 +1,17 @@
 package casadamoeda.seame.util;
 
-import casadamoeda.seame.util.operator.ListItem;
+import casadamoeda.seame.operator.ListItem;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class ExtractLines {
+public class LineExtractor {
     private final ArrayList<ListItem> list = new ArrayList<>();
     String filename;
 
-    public ExtractLines(String filename) {
+    public LineExtractor(String filename) {
         this.filename = filename;
         LoadExtractedLines(this.filename);
     }
@@ -30,6 +30,10 @@ public class ExtractLines {
             String line = br.readLine();
 
             while (line != null) {
+                if (this.filename.startsWith(".txt", this.filename.length() - 4)) {
+                    CsvConverter converter = new CsvConverter();
+                    line = converter.GetCsv(line);
+                }
                 ListItem item = new ListItem(line);
                 AddItem(item);
                 line = br.readLine();
@@ -41,7 +45,7 @@ public class ExtractLines {
         System.out.println("Lines extracted.");
     }
 
-    protected void AddItem(ListItem item) {
+    private void AddItem(ListItem item) {
         this.list.add(item);
     }
 }

@@ -1,4 +1,4 @@
-package casadamoeda.seame.util.operator;
+package casadamoeda.seame.operator;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,6 +14,7 @@ public class ListItem {
     public List<String> GetItems() {
         return this.itemDetails;
     }
+
     protected void LoadDetails(String line) {
         try {
             this.itemDetails.addAll(Arrays.asList(line.split(";")));

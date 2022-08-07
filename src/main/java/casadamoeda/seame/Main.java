@@ -1,30 +1,34 @@
 package casadamoeda.seame;
 
-import casadamoeda.seame.bankslip.SlipOperator;
-import casadamoeda.seame.order.OrderOperator;
 import casadamoeda.seame.util.Merger;
+import casadamoeda.seame.operator.Operator;
 
 public class Main {
     public static void main(String[] args) {
 
-        SlipOperator bankslipOperator = new SlipOperator("boletos-20220805.csv");
+        Operator bankslipOperator = new Operator("boletos-20220802.txt");
 
-        bankslipOperator.LoadBankSlip();
+        bankslipOperator.LoadOrders();
 
-//        System.out.println(bankslipOperator);
+        System.out.println(bankslipOperator);
 
-//        bankslipOperator.PrintBankSlipCSV();
+        bankslipOperator.CreateCsvFile();
 
-//        bankslipOperator.CreateBankslipCsvFile();
-
-        OrderOperator orderOperator = new OrderOperator("Pedidos_CM_2022_08_04.csv");
+        Operator orderOperator = new Operator("pedidos-teste.csv");
 
         orderOperator.LoadOrders();
 
-//        orderOperator.PrintOrderList();
+        orderOperator.CreateCsvFile();
 
-        Merger merger = new Merger(orderOperator.GetList(), bankslipOperator.GetList());
 
-        merger.PrintTableB();
+        Merger merger = new Merger(orderOperator.GetItemList(), bankslipOperator.GetItemList());
+
+        merger.SelectHeaders("A", new Integer[]{0,5,6,7,8,9,13,14,16,17,18});
+
+        merger.SelectHeaders("B", new Integer[]{0,1,2,3,4,10});
+
+        merger.PrintTable("B");
+
+        merger.Merge(0, 0);
     }
 }

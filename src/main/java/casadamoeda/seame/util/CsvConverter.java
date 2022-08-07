@@ -5,10 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Converter {
+public class CsvConverter {
     private String csvLine;
 
-    public Converter() {
+    public CsvConverter() {
         this.csvLine = "";
     }
 
