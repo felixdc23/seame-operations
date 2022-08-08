@@ -41,6 +41,7 @@ public class TableMerger {
             System.out.println("Selected columns:");
             this.selectedColumns.forEach(System.out::println);
         }
+
     }
 
     public TableMerger(ArrayList<ListItem> table1, ArrayList<ListItem> table2) {
@@ -57,6 +58,10 @@ public class TableMerger {
         } else {
             System.out.println("Invalid table");
         }
+    }
+
+    public ArrayList<String> GetMerged() {
+        return this.merged;
     }
 
     public void SelectHeaders(String table, Integer[] headers) {
@@ -93,10 +98,6 @@ public class TableMerger {
 
 //        merged.forEach(System.out::println);
         return this.merged = new ArrayList<>(merged);
-    }
-
-    public ArrayList<String> GetMerged() {
-        return this.merged;
     }
 
 }

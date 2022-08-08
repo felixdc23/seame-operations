@@ -7,8 +7,9 @@ import java.util.ArrayList;
 public class Operator {
     public final String filepath;
     public final String filename;
-
     private final ItemList itemList = new ItemList();
+
+
 
     public Operator(String path, String filename) {
         this.filepath = path;
@@ -27,13 +28,13 @@ public class Operator {
         this.itemList.items.forEach(System.out::println);
     }
 
-    public ArrayList<ListItem> GetItemList() {
-        return this.itemList.items;
-    }
-
     public void CreateCsvFile() {
         CsvFileCreator csv = new CsvFileCreator("staging/", this.filename, this.itemList.GetItemList());
         csv.GenerateFile();
+    }
+
+    public ArrayList<ListItem> GetItemList() {
+        return this.itemList.items;
     }
 
 }

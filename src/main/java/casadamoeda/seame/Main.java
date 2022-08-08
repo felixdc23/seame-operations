@@ -29,9 +29,9 @@ public class Main {
 
         TableMerger tableMerger = new TableMerger(table1.GetItemList(), table2.GetItemList());
 
-        tableMerger.SelectHeaders("A", new Integer[]{0,5,6,7,8,9,11,12,14,15,16});
+        tableMerger.SelectHeaders("A", new Integer[]{0, 5, 6, 7, 8, 9, 11, 12, 14, 15, 16});
 
-        tableMerger.SelectHeaders("B", new Integer[]{0,1,2,3,4,10});
+        tableMerger.SelectHeaders("B", new Integer[]{0, 1, 2, 3, 4, 10});
 
         tableMerger.Merge(0, 0);
 

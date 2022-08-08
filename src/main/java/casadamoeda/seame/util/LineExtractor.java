@@ -7,26 +7,13 @@ import java.util.ArrayList;
 
 public class LineExtractor {
     private final ArrayList<String> list = new ArrayList<>();
-    String filename;
+    private String filename;
 
     public LineExtractor() {}
 
     public LineExtractor(String filename) {
         this.filename = filename;
         ExtractLines(this.filename);
-    }
-
-    public void ExtractLines(String filename) {
-        LoadExtractedLines(filename);
-    }
-
-    public ArrayList<String> GetExtractedLines() {
-        if (!this.list.isEmpty()) {
-            return this.list;
-        } else {
-            return null;
-        }
-
     }
 
     private void LoadExtractedLines(String filename) {
@@ -46,6 +33,19 @@ public class LineExtractor {
         }
 
         System.out.println("Lines extracted.");
+    }
+
+    public void ExtractLines(String filename) {
+        LoadExtractedLines(filename);
+    }
+
+    public ArrayList<String> GetExtractedLines() {
+        if (!this.list.isEmpty()) {
+            return this.list;
+        } else {
+            return null;
+        }
+
     }
 
 }

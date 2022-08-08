@@ -6,7 +6,6 @@ import java.util.List;
 
 public class ListItem {
     protected final List<String> itemDetails = new ArrayList<>();
-
     public ListItem(String line) {
         LoadDetails(line);
     }

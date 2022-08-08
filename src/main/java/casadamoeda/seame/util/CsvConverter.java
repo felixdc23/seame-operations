@@ -12,18 +12,6 @@ public class CsvConverter {
         this.csvLine = "";
     }
 
-    private Boolean CheckNumeric(String s) {
-        if (s == null) {
-            return false;
-        }
-        try {
-            Double.parseDouble(s);
-            return true;
-        } catch (NumberFormatException nfe) {
-            return false;
-        }
-    }
-
     private String ApplyCsvFormat(String line) {
         String formatLine;
 
@@ -34,6 +22,18 @@ public class CsvConverter {
         }
 
         return formatLine;
+    }
+
+    private Boolean CheckNumeric(String s) {
+        if (s == null) {
+            return false;
+        }
+        try {
+            Double.parseDouble(s);
+            return true;
+        } catch (NumberFormatException nfe) {
+            return false;
+        }
     }
 
     private String ConvertToCsv(String line) {

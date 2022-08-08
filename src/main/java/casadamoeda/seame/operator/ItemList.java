@@ -7,6 +7,22 @@ import java.util.*;
 public class ItemList {
     protected final ArrayList<ListItem> items = new ArrayList<>();
 
+    protected ListItem GetHeader() {
+        if (!this.items.isEmpty()) {
+            return this.items.get(0);
+        } else {
+            return null;
+        }
+    }
+
+    protected ArrayList<String> GetItemList() {
+        return new ArrayList<>(this.items.stream().map(ListItem::toString).toList());
+    }
+
+    protected void AddItem(int index, ListItem item) {
+        this.items.add(index, item);
+    }
+
     public void LoadItemList(String filename) {
         LineExtractor extractor = new LineExtractor(filename);
 
@@ -26,22 +42,6 @@ public class ItemList {
         Collections.swap(tmpList, tmpList.indexOf(header), 0);
 
         return tmpList;
-    }
-
-    protected ListItem GetHeader() {
-        if (!this.items.isEmpty()) {
-            return this.items.get(0);
-        } else {
-            return null;
-        }
-    }
-
-    protected ArrayList<String> GetItemList() {
-        return new ArrayList<>(this.items.stream().map(ListItem::toString).toList());
-    }
-
-    protected void AddItem(int index, ListItem item) {
-        this.items.add(index, item);
     }
 
 }
