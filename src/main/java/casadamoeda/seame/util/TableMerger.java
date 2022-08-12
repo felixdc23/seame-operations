@@ -88,11 +88,15 @@ public class TableMerger {
         this.leftTable.table.stream().skip(1).forEach(itemA -> this.rightTable.table.stream().skip(1).forEach(itemB -> {
             sb.setLength(0);
 
-            if (itemA.GetItems().get(colA).replace("\"", "").equals(itemB.GetItems().get(colB).replace("\"", "").substring(11, 17))) {
+//            if (itemA.GetItems().get(colA).replace("\"", "").equals(itemB.GetItems().get(colB).replace("\"", "").substring(11, 17))) {
+            if (itemA.GetItems().get(colA).replace("\"", "").substring(8, 17).equals(itemB.GetItems().get(colB).replace("\"", ""))) {
+
 //                    sb.append(itemA.GetItems().get(colA));
-                leftTable.selectedColumns.forEach(col -> sb.append(itemA.GetItems().get(col)).append(";"));
-                rightTable.selectedColumns.forEach(col -> sb.append(itemB.GetItems().get(col)).append(";"));
-                merged.add(sb.toString());
+                if  (!itemB.GetItems().get(3).isBlank()) {
+                    leftTable.selectedColumns.forEach(col -> sb.append(itemA.GetItems().get(col)).append(";"));
+                    rightTable.selectedColumns.forEach(col -> sb.append(itemB.GetItems().get(col)).append(";"));
+                    merged.add(sb.toString());
+                }
             }
         }));
 

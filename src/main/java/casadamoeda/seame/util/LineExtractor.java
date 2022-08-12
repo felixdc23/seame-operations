@@ -18,7 +18,7 @@ public class LineExtractor {
 
     private void LoadExtractedLines(String filename) {
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
-            String line = br.readLine();
+            String line = br.readLine().strip();
 
             while (line != null) {
                 if (this.filename.startsWith(".txt", this.filename.length() - 4)) {

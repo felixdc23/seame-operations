@@ -16,7 +16,12 @@ public class ListItem {
 
     protected void LoadDetails(String line) {
         try {
-            this.itemDetails.addAll(Arrays.asList(line.split(";")));
+            ArrayList<String> tmpList = new ArrayList<>(Arrays.asList(line.split(";")));
+            tmpList.forEach(s -> {
+                this.itemDetails.add(s.strip());
+            });
+//            this.itemDetails.addAll(Arrays.asList(line.split(";")));
+
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
