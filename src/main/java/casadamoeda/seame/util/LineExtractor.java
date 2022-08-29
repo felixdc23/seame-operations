@@ -13,17 +13,17 @@ public class LineExtractor {
 
     public LineExtractor(String filename) {
         this.filename = filename;
-        ExtractLines(this.filename);
+        extractLines(this.filename);
     }
 
-    private void LoadExtractedLines(String filename) {
+    private void loadExtractedLines(String filename) {
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
             String line = br.readLine().strip();
 
             while (line != null) {
                 if (this.filename.startsWith(".txt", this.filename.length() - 4)) {
                     CsvConverter converter = new CsvConverter();
-                    line = converter.GetCsv(line);
+                    line = converter.getCsv(line);
                 }
                 this.list.add(line);
                 line = br.readLine();
@@ -35,11 +35,11 @@ public class LineExtractor {
         System.out.println("Lines extracted.");
     }
 
-    public void ExtractLines(String filename) {
-        LoadExtractedLines(filename);
+    public void extractLines(String filename) {
+        loadExtractedLines(filename);
     }
 
-    public ArrayList<String> GetExtractedLines() {
+    public ArrayList<String> getExtractedLines() {
         if (!this.list.isEmpty()) {
             return this.list;
         } else {

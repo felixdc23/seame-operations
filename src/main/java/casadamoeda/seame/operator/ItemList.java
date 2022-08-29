@@ -15,25 +15,25 @@ public class ItemList {
         }
     }
 
-    protected ArrayList<String> GetItemList() {
+    protected ArrayList<String> getItemList() {
         return new ArrayList<>(this.items.stream().map(ListItem::toString).toList());
     }
 
-    protected void AddItem(int index, ListItem item) {
+    protected void addItem(int index, ListItem item) {
         this.items.add(index, item);
     }
 
-    public void LoadItemList(String filename) {
+    public void loadItemList(String filename) {
         LineExtractor extractor = new LineExtractor(filename);
 
-        ArrayList<String> lines = extractor.GetExtractedLines();
+        ArrayList<String> lines = extractor.getExtractedLines();
 
-        lines = RemoveDuplicates(lines);
+        lines = removeDuplicates(lines);
 
         lines.forEach(s -> this.items.add(new ListItem(s)));
     }
 
-    public ArrayList<String> RemoveDuplicates(ArrayList<String> list) {
+    public ArrayList<String> removeDuplicates(ArrayList<String> list) {
         String header = list.get(0);
 
         HashSet<String> set = new HashSet<>(list);

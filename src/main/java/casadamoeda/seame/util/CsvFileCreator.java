@@ -10,7 +10,13 @@ public class CsvFileCreator {
     private final String filename;
     private final ArrayList<String> lines;
 
-    protected void CreateFile(String pathname) {
+    public CsvFileCreator(String filepath, String filename, ArrayList<String> lines) {
+        this.filepath = filepath;
+        this.filename = filename;
+        this.lines = lines;
+    }
+
+    protected void createFile(String pathname) {
         if (!this.lines.isEmpty()) {
             try {
                 File file = new File(pathname.substring(0, pathname.length() - 4) + ".csv");
@@ -34,13 +40,7 @@ public class CsvFileCreator {
         }
     }
 
-    public CsvFileCreator(String filepath, String filename, ArrayList<String> lines) {
-        this.filepath = filepath;
-        this.filename = filename;
-        this.lines = lines;
-    }
-
-    public void GenerateFile() {
-        CreateFile(this.filepath + this.filename);
+    public void generateFile() {
+        createFile(this.filepath + this.filename);
     }
 }

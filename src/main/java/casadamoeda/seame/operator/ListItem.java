@@ -6,7 +6,7 @@ import java.util.List;
 
 public class ListItem {
     protected final List<String> itemDetails = new ArrayList<>();
-    public ListItem(String line) {
+    protected ListItem(String line) {
         LoadDetails(line);
     }
 
@@ -17,9 +17,7 @@ public class ListItem {
     protected void LoadDetails(String line) {
         try {
             ArrayList<String> tmpList = new ArrayList<>(Arrays.asList(line.split(";")));
-            tmpList.forEach(s -> {
-                this.itemDetails.add(s.strip());
-            });
+            tmpList.forEach(s -> this.itemDetails.add(s.strip()));
 //            this.itemDetails.addAll(Arrays.asList(line.split(";")));
 
         } catch (Exception e) {

@@ -7,39 +7,39 @@ import casadamoeda.seame.operator.Operator;
 public class Main {
     public static void main(String[] args) {
 
-        Operator bankslipOperator = new Operator("data/", "boletos-20220810.txt");
+        Operator bankslipOperator = new Operator("data/", "boletos-20220829.txt");
 
-        bankslipOperator.LoadItems();
+        bankslipOperator.loadItems();
 
-        bankslipOperator.AddHeader("\"numero\";\"nome\";\"data de criacao\";\"data de pagamento\";\"valor\";\"col05\";\"col06\";\"col07\";\"col08\";\"col9\";\"total\";\"col11\";\"col12\"");
+        bankslipOperator.addHeader("\"numero\";\"nome\";\"vencimento\";\"data de pagamento\";\"valor\";\"col05\";\"col06\";\"col07\";\"col08\";\"col9\";\"total\";\"col11\";\"col12\"");
 
-        bankslipOperator.CreateCsvFile();
+        bankslipOperator.createCsvFile();
 
 //        Operator orderOperator = new Operator("data/", "PedidosCM_2022_08_10.csv");
-        Operator orderOperator = new Operator("data/", "faturados-20220811.csv");
+        Operator orderOperator = new Operator("data/", "faturados-20220829.csv");
 
-        orderOperator.LoadItems();
+        orderOperator.loadItems();
 
-        orderOperator.CreateCsvFile();
+        orderOperator.createCsvFile();
 
 //        Operator table1 = new Operator("staging/", "PedidosCM_2022_08_10.csv");
-        Operator table1 = new Operator("staging/", bankslipOperator.filename.substring(0, bankslipOperator.filename.length() - 4) + ".csv");
-        table1.LoadItems();
+        Operator table1 = new Operator("staging/", bankslipOperator.getFilename().substring(0, bankslipOperator.getFilename().length() - 4) + ".csv");
+        table1.loadItems();
 
-        Operator table2 = new Operator("staging/", "faturados-20220811.csv");
+        Operator table2 = new Operator("staging/", "faturados-20220829.csv");
 
-        table2.LoadItems();
+        table2.loadItems();
 
-        TableMerger tableMerger = new TableMerger(table1.GetItemList(), table2.GetItemList());
+        TableMerger tableMerger = new TableMerger(table1.getItemList(), table2.getItemList());
 
-        tableMerger.SelectHeaders("A", new Integer[]{0, 1, 2, 3, 4, 10});
+        tableMerger.selectHeaders("A", new Integer[]{0, 1, 2, 3, 4, 8, 10});
 
-        tableMerger.SelectHeaders("B", new Integer[]{0, 2, 3, 4, 5, 6});
+        tableMerger.selectHeaders("B", new Integer[]{0, 2, 3, 4, 5, 6});
 
-        tableMerger.Merge(0, 0);
+        tableMerger.merge(0, 0);
 
-        CsvFileCreator csv = new CsvFileCreator("output/", "merged" + bankslipOperator.filename, tableMerger.GetMerged());
-        csv.GenerateFile();
+        CsvFileCreator csv = new CsvFileCreator("output/", "merged" + bankslipOperator.getFilename(), tableMerger.getMerged());
+        csv.generateFile();
 
     }
 }

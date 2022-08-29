@@ -18,18 +18,18 @@ public class TableMerger {
 
         public Table(ArrayList<ListItem> table) {
             this.table = table;
-            LoadHeader();
+            loadHeader();
         }
 
-        protected void LoadHeader() {
+        protected void loadHeader() {
             this.headers.addAll(Arrays.stream(this.table.get(0).toString().split(";")).toList());
         }
 
-        protected void AddSelectedHeaders(Integer[] intList) {
+        protected void addSelectedHeaders(Integer[] intList) {
             this.selectedColumns.addAll(Arrays.stream(intList).toList());
         }
 
-        public void PrintTable() {
+        public void printTable() {
             System.out.println("Headers:");
 
             final AtomicInteger count = new AtomicInteger();
@@ -50,31 +50,31 @@ public class TableMerger {
         this.rightTable = new Table(table2);
     }
 
-    public void PrintTable(String table) {
+    public void printTable(String table) {
         if (table.equalsIgnoreCase("A")) {
-            this.leftTable.PrintTable();
+            this.leftTable.printTable();
         } else if (table.equalsIgnoreCase("B")) {
-            this.rightTable.PrintTable();
+            this.rightTable.printTable();
         } else {
             System.out.println("Invalid table");
         }
     }
 
-    public ArrayList<String> GetMerged() {
+    public ArrayList<String> getMerged() {
         return this.merged;
     }
 
-    public void SelectHeaders(String table, Integer[] headers) {
+    public void selectHeaders(String table, Integer[] headers) {
         if (table.equalsIgnoreCase("A")) {
-            this.leftTable.AddSelectedHeaders(headers);
+            this.leftTable.addSelectedHeaders(headers);
         } else if (table.equalsIgnoreCase("B")) {
-            this.rightTable.AddSelectedHeaders(headers);
+            this.rightTable.addSelectedHeaders(headers);
         } else {
             System.out.println("Invalid table");
         }
     }
 
-    public ArrayList<String> Merge(int colA, int colB) {
+    public ArrayList<String> merge(int colA, int colB) {
         ArrayList<String> merged = new ArrayList<>();
 
         StringBuilder sb = new StringBuilder();
@@ -105,4 +105,3 @@ public class TableMerger {
     }
 
 }
-
