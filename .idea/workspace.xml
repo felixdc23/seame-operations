@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6292bf38-d08c-47dd-a187-9b77ba60660d" name="Changes" comment="Some changes.">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/TextFileFormat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/ItemList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/ItemList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/ListItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/ListItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/Operator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/CsvConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/CsvConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/CsvFileCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/CsvFileCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/LineExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/LineExtractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/TableMerger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/TableMerger.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +83,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/daniel/Projects/lista-boletos/data&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/daniel/Projetos/seame-operations/data&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -93,7 +92,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -114,7 +113,9 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="casadamoeda.seame.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="jbr-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="casadamoeda.seame.Main" />
       <module name="lista-boletos.main" />
       <extension name="coverage">
@@ -129,7 +130,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.casadamoeda.seame.Main" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -174,6 +175,15 @@
       <workItem from="1661432824426" duration="1255000" />
       <workItem from="1661519840020" duration="1716000" />
       <workItem from="1661780024300" duration="792000" />
+      <workItem from="1665151302707" duration="506000" />
+      <workItem from="1665151811697" duration="109000" />
+      <workItem from="1666009854938" duration="190000" />
+      <workItem from="1666563718820" duration="168000" />
+      <workItem from="1666563889920" duration="5000" />
+      <workItem from="1667481652013" duration="2163000" />
+      <workItem from="1667524839774" duration="36000" />
+      <workItem from="1667529332608" duration="2000" />
+      <workItem from="1667562933295" duration="11693000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1659473146634</created>
@@ -295,6 +305,20 @@
     <MESSAGE value="Improvements and simplifications.&#10;Merger working." />
     <MESSAGE value="Some changes." />
     <option name="LAST_COMMIT_MESSAGE" value="Some changes." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/TableMerger.java</url>
+          <line>87</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/lista_boletos$Main.ic" NAME="Main Coverage Results" MODIFIED="1659468777623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

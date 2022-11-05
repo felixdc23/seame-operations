@@ -3,6 +3,10 @@ package casadamoeda.seame.util;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class CsvFileCreator {
@@ -19,7 +23,15 @@ public class CsvFileCreator {
     protected void createFile(String pathname) {
         if (!this.lines.isEmpty()) {
             try {
-                File file = new File(pathname.substring(0, pathname.length() - 4) + ".csv");
+
+                String filePath = pathname.substring(0, pathname.length() - 4) + ".csv";
+                Path pathFilename = Paths.get(filePath);
+                try {
+                    Files.delete(pathFilename);
+                } catch (NoSuchFileException ignored) {
+                }
+
+                File file = new File(filePath);
                 if (file.createNewFile()) {
                     FileWriter fileWriter = new FileWriter(file);
                     this.lines.forEach(s -> {
