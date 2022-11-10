@@ -1,0 +1,119 @@
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\n  <component name=\"FrameworkDetectionExcludesConfiguration\">\n    <file type=\"web\" url=\"file://$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_18\" default=\"true\" project-jdk-name=\"18\" project-jdk-type=\"JavaSDK\">\n    <output url=\"file://$PROJECT_DIR$/out\" />\n  </component>\n  <component name=\"ProjectType\">\n    <option name=\"id\" value=\"jpab\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 84c8c0099b821b84e36c9da0c38af7342f2bd6f1)
++++ b/.idea/misc.xml	(date 1660317020075)
+@@ -4,7 +4,7 @@
+   <component name="FrameworkDetectionExcludesConfiguration">
+     <file type="web" url="file://$PROJECT_DIR$" />
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="18" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" project-jdk-name="18" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+   <component name="ProjectType">
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"6292bf38-d08c-47dd-a187-9b77ba60660d\" name=\"Changes\" comment=\"Some changes.\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/casadamoeda/seame/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/casadamoeda/seame/Main.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/ListItem.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/ListItem.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/LineExtractor.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/LineExtractor.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/TableMerger.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/TableMerger.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ExternalProjectsData\">\n    <projectState path=\"$PROJECT_DIR$\">\n      <ProjectState />\n    </projectState>\n  </component>\n  <component name=\"ExternalProjectsManager\">\n    <system id=\"GRADLE\">\n      <state>\n        <task path=\"$PROJECT_DIR$\">\n          <activation />\n        </task>\n        <projects_view>\n          <tree_state>\n            <expand>\n              <path>\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\n                <item name=\"lista-boletos\" type=\"f1a62948:ProjectNode\" />\n              </path>\n              <path>\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\n                <item name=\"lista-boletos\" type=\"f1a62948:ProjectNode\" />\n                <item name=\"Tasks\" type=\"e4a08cd1:TasksNode\" />\n              </path>\n            </expand>\n            <select />\n          </tree_state>\n        </projects_view>\n      </state>\n    </system>\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Interface\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"PUSH_TAGS\">\n      <GitPushTagMode>\n        <option name=\"argument\" value=\"--tags\" />\n        <option name=\"title\" value=\"All\" />\n      </GitPushTagMode>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n    <option name=\"UPDATE_TYPE\" value=\"REBASE\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2ClCg9tW6T7tavmVsc5X2A0AaQd\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/home/daniel/Projects/lista-boletos/data&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/data\" />\n      <recent name=\"$PROJECT_DIR$/src/main/java/br/gov/casadamoeda/seame\" />\n    </key>\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/data\" />\n      <recent name=\"$PROJECT_DIR$\" />\n    </key>\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\n      <recent name=\"casadamoeda.seame.util\" />\n      <recent name=\"br.gov.casadamoeda.seame.util\" />\n      <recent name=\"br.gov.casadamoeda.seame.operator\" />\n      <recent name=\"br.gov.casadamoeda.seame.bankslip\" />\n      <recent name=\"br.gov.casadamoeda.seame\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"casadamoeda.seame.Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"casadamoeda.seame.Main\" />\n      <module name=\"lista-boletos.main\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"br.gov.casadamoeda.seame.bankslip.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.casadamoeda.seame.Main\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"6292bf38-d08c-47dd-a187-9b77ba60660d\" name=\"Changes\" comment=\"\" />\n      <created>1659367892500</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1659367892500</updated>\n      <workItem from=\"1659367894299\" duration=\"15470000\" />\n      <workItem from=\"1659444047492\" duration=\"28104000\" />\n      <workItem from=\"1659526549444\" duration=\"7004000\" />\n      <workItem from=\"1659619369083\" duration=\"15371000\" />\n      <workItem from=\"1659662162484\" duration=\"178000\" />\n      <workItem from=\"1659664729244\" duration=\"7246000\" />\n      <workItem from=\"1659672452290\" duration=\"780000\" />\n      <workItem from=\"1659700205624\" duration=\"8399000\" />\n      <workItem from=\"1659716448414\" duration=\"16000\" />\n      <workItem from=\"1659717862283\" duration=\"16228000\" />\n      <workItem from=\"1659795038994\" duration=\"51000\" />\n      <workItem from=\"1659833248174\" duration=\"10807000\" />\n      <workItem from=\"1659844066579\" duration=\"4413000\" />\n      <workItem from=\"1659882606437\" duration=\"14510000\" />\n      <workItem from=\"1659898151125\" duration=\"208000\" />\n      <workItem from=\"1659906252801\" duration=\"6143000\" />\n      <workItem from=\"1659959597585\" duration=\"776000\" />\n      <workItem from=\"1660070634564\" duration=\"2390000\" />\n      <workItem from=\"1660153670963\" duration=\"3835000\" />\n      <workItem from=\"1660228665651\" duration=\"2740000\" />\n      <workItem from=\"1660254724032\" duration=\"1991000\" />\n      <workItem from=\"1660304933929\" duration=\"6065000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"First commit\">\n      <created>1659473146634</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1659473146634</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"First project cleaning a restructuring.\">\n      <created>1659477402631</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1659477402631</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"First project cleaning a restructuring.\">\n      <created>1659477948496</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1659477948496</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Add create csv file function.&#10;Other minor changes.\">\n      <created>1659542491749</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1659542491749</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Major change in project structure&#10;Generalization of the Operator class&#10;Created Order package\">\n      <created>1659656967803</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1659656967803</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"More changes in project structure.&#10;Generalizations.\">\n      <created>1659671964701</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1659671964701</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"Renamed for standardization\">\n      <created>1659672690552</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1659672690552</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"Details\">\n      <created>1659673219881</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1659673219881</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"Merging ongoing\">\n      <created>1659754502670</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1659754502670</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"Improvements and simplifications.&#10;Merger working.\">\n      <created>1659842880523</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1659842880523</updated>\n    </task>\n    <task id=\"LOCAL-00011\" summary=\"Some changes.\">\n      <created>1659898287626</created>\n      <option name=\"number\" value=\"00011\" />\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1659898287626</updated>\n    </task>\n    <task id=\"LOCAL-00012\" summary=\"Some changes.\">\n      <created>1659960465197</created>\n      <option name=\"number\" value=\"00012\" />\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1659960465197</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"13\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"First commit\" />\n    <MESSAGE value=\"First project cleaning a restructuring.\" />\n    <MESSAGE value=\"Add create csv file function.&#10;Other minor changes.\" />\n    <MESSAGE value=\"Major change in project structure&#10;Generalization of the Operator class&#10;Created Order package\" />\n    <MESSAGE value=\"More changes in project structure.&#10;Generalizations.\" />\n    <MESSAGE value=\"Renamed for standardization\" />\n    <MESSAGE value=\"Details\" />\n    <MESSAGE value=\"Merging ongoing\" />\n    <MESSAGE value=\"Improvements and simplifications.&#10;Merger working.\" />\n    <MESSAGE value=\"Some changes.\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Some changes.\" />\n  </component>\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\n    <SUITE FILE_PATH=\"coverage/lista_boletos$Main.ic\" NAME=\"Main Coverage Results\" MODIFIED=\"1659468777623\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\n      <FILTER>br.gov.casadamoeda.seame.*</FILTER>\n    </SUITE>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 84c8c0099b821b84e36c9da0c38af7342f2bd6f1)
++++ b/.idea/workspace.xml	(date 1662508266024)
+@@ -5,11 +5,9 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="6292bf38-d08c-47dd-a187-9b77ba60660d" name="Changes" comment="Some changes.">
++      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/Main.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/ListItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/operator/ListItem.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/LineExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/LineExtractor.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/TableMerger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/casadamoeda/seame/util/TableMerger.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -64,6 +62,9 @@
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+     <option name="UPDATE_TYPE" value="REBASE" />
+   </component>
++  <component name="HighlightingSettingsPerFile">
++    <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
++  </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+@@ -80,7 +81,7 @@
+     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+     &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;/home/daniel/Projects/lista-boletos/data&quot;,
++    &quot;last_opened_file_path&quot;: &quot;/home/daniel/.sdkman/candidates/gradle/current&quot;,
+     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+@@ -89,7 +90,7 @@
+     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
++    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
+   }
+ }</component>
+   <component name="RecentsManager">
+@@ -110,7 +111,9 @@
+     </key>
+   </component>
+   <component name="RunManager">
+-    <configuration name="casadamoeda.seame.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="ALTERNATIVE_JRE_PATH" value="18 (2)" />
++      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+       <option name="MAIN_CLASS_NAME" value="casadamoeda.seame.Main" />
+       <module name="lista-boletos.main" />
+       <extension name="coverage">
+@@ -125,7 +128,7 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Application.casadamoeda.seame.Main" />
++        <item itemvalue="Application.Main" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -159,6 +162,9 @@
+       <workItem from="1660228665651" duration="2740000" />
+       <workItem from="1660254724032" duration="1991000" />
+       <workItem from="1660304933929" duration="6065000" />
++      <workItem from="1660312879122" duration="1655000" />
++      <workItem from="1660314540164" duration="1806000" />
++      <workItem from="1662505837397" duration="655000" />
+     </task>
+     <task id="LOCAL-00001" summary="First commit">
+       <created>1659473146634</created>
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"GradleMigrationSettings\" migrationVersion=\"1\" />\n  <component name=\"GradleSettings\">\n    <option name=\"linkedExternalProjectsSettings\">\n      <GradleProjectSettings>\n        <option name=\"delegatedBuild\" value=\"true\" />\n        <option name=\"testRunner\" value=\"GRADLE\" />\n        <option name=\"distributionType\" value=\"LOCAL\" />\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\n        <option name=\"gradleHome\" value=\"$USER_HOME$/.sdkman/candidates/gradle/current\" />\n        <option name=\"modules\">\n          <set>\n            <option value=\"$PROJECT_DIR$\" />\n          </set>\n        </option>\n      </GradleProjectSettings>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/gradle.xml b/.idea/gradle.xml
+--- a/.idea/gradle.xml	(revision 84c8c0099b821b84e36c9da0c38af7342f2bd6f1)
++++ b/.idea/gradle.xml	(date 1660314535260)
+@@ -9,6 +9,7 @@
+         <option name="distributionType" value="LOCAL" />
+         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+         <option name="gradleHome" value="$USER_HOME$/.sdkman/candidates/gradle/current" />
++        <option name="gradleJvm" value="18 (2)" />
+         <option name="modules">
+           <set>
+             <option value="$PROJECT_DIR$" />
