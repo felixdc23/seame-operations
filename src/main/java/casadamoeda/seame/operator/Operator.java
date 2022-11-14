@@ -35,10 +35,10 @@ public class Operator {
         this.itemList.items.forEach(System.out::println);
     }
 
-    public void createCsvFile() {
-        CsvFileCreator csv = new CsvFileCreator("staging/", this.filename, this.itemList.getItemList());
-        csv.generateFile();
-    }
+//    public void createCsvFile() {
+//        CsvFileCreator csv = new CsvFileCreator(this.filepath + this.filename, "staging/");
+//        csv.generateFile();
+//    }
 
     public ArrayList<ListItem> getItemList() {
         return this.itemList.items;

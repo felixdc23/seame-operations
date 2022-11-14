@@ -72,7 +72,7 @@ public class TextFileFormat {
                     sb.append(" ");
                 } else {
                     sb.append(System.lineSeparator());
-                    writeLine(sb.toString(), pathFilename.toString());
+                    writeLine(formatOrderNumber(sb.toString()), pathFilename.toString());
                     sb.setLength(0);
                 }
 
@@ -86,6 +86,13 @@ public class TextFileFormat {
         BufferedWriter br = new BufferedWriter(new FileWriter(pathFilename, true));
         br.append(line);
         br.close();
+    }
+
+    public String formatOrderNumber(String line) {
+        String[] lineArray = line.split(" ");
+        lineArray[0] = lineArray[0].substring(lineArray[0].length() - 11, lineArray[0].length() - 2);
+
+        return String.join(" ", lineArray);
     }
 
 }

@@ -1,58 +1,67 @@
 package casadamoeda.seame.util;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 
 public class CsvFileCreator {
+    private final String sourcePath;
+    private final String sourceFile;
     private final String filepath;
-    private final String filename;
-    private final ArrayList<String> lines;
 
-    public CsvFileCreator(String filepath, String filename, ArrayList<String> lines) {
+    public String getFilepathName() {
+        return filepath;
+    }
+
+    public CsvFileCreator(String sourcePath, String sourceFile, String filepath) {
+        this.sourcePath = sourcePath;
+        this.sourceFile = sourceFile;
         this.filepath = filepath;
-        this.filename = filename;
-        this.lines = lines;
     }
 
-    protected void createFile(String pathname) {
-        if (!this.lines.isEmpty()) {
+    public void createFile() {
+        try {
+            String filePath = this.filepath + this.sourceFile.substring(0, this.sourceFile.length() - 4) + ".csv";
+            Path pathFilename = Paths.get(filePath);
             try {
+                Files.delete(pathFilename);
+            } catch (NoSuchFileException ignored) { }
 
-                String filePath = pathname.substring(0, pathname.length() - 4) + ".csv";
-                Path pathFilename = Paths.get(filePath);
-                try {
-                    Files.delete(pathFilename);
-                } catch (NoSuchFileException ignored) {
+            File file = new File(filePath);
+            FileWriter fileWriter = new FileWriter(file);
+
+            String sourcePath = this.sourcePath + this.sourceFile;
+
+            try (BufferedReader br = new BufferedReader(new FileReader(sourcePath))) {
+                String line = br.readLine().strip();
+
+                while (line != null) {
+                    if (this.sourceFile.startsWith(".txt", this.sourceFile.length() - 4)) {
+                        CsvConverter converter = new CsvConverter();
+                        line = converter.getCsv(line);
+                    }
+                    try {
+                        fileWriter.write(line + System.getProperty("line.separator"));
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+
+                    line = br.readLine();
+
                 }
 
-                File file = new File(filePath);
-                if (file.createNewFile()) {
-                    FileWriter fileWriter = new FileWriter(file);
-                    this.lines.forEach(s -> {
-                        try {
-                            fileWriter.write(s + System.getProperty("line.separator"));
-                        } catch (IOException e) {
-                            throw new RuntimeException(e);
-                        }
-                    });
-                    fileWriter.close();
-                } else {
-                    System.out.println("File already exists.");
-                }
             } catch (IOException e) {
-                System.out.println("An error occurred.");
-                e.printStackTrace();
+                throw new RuntimeException(e);
             }
-        }
-    }
 
-    public void generateFile() {
-        createFile(this.filepath + this.filename);
-    }
+            fileWriter.close();
+
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+   }
+
 }

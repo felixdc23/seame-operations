@@ -47,7 +47,7 @@ public class CsvConverter {
         if (line[2].length() > 0) {
             StringBuilder sb = new StringBuilder(line[1]);
 
-            List<String> tmpLine = new ArrayList<>(Arrays.stream(line[2].split(" ")).toList());
+            ArrayList<String> tmpLine = Arrays.stream(line[2].split(" ")).collect(Collectors.toCollection(ArrayList::new));
             String[] tmpArray = {"", "", ""};
 
             if (line[0].equals("0")) {
