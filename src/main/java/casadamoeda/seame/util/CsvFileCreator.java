@@ -5,14 +5,21 @@ import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class CsvFileCreator {
     private final String sourcePath;
     private final String sourceFile;
     private final String filepath;
 
-    public String getFilepathName() {
-        return filepath;
+    public String getFilePath() {
+        return this.filepath;
+    }
+
+    public String getFileName() {
+        return this.sourceFile.substring(0, this.sourceFile.length() - 4) + ".csv";
     }
 
     public CsvFileCreator(String sourcePath, String sourceFile, String filepath) {
@@ -21,9 +28,19 @@ public class CsvFileCreator {
         this.filepath = filepath;
     }
 
+    private String trimLine(String line) {
+        List<String> trimmedLine;
+
+        trimmedLine = Arrays.stream(line.split(";")).toList();
+
+        trimmedLine = trimmedLine.stream().map(String::trim).collect(Collectors.toList());
+
+        return String.join(";", trimmedLine);
+    }
+
     public void createFile() {
         try {
-            String filePath = this.filepath + this.sourceFile.substring(0, this.sourceFile.length() - 4) + ".csv";
+            String filePath = getFilePath() + getFileName();
             Path pathFilename = Paths.get(filePath);
             try {
                 Files.delete(pathFilename);
@@ -35,7 +52,7 @@ public class CsvFileCreator {
             String sourcePath = this.sourcePath + this.sourceFile;
 
             try (BufferedReader br = new BufferedReader(new FileReader(sourcePath))) {
-                String line = br.readLine().strip();
+                String line = br.readLine();
 
                 while (line != null) {
                     if (this.sourceFile.startsWith(".txt", this.sourceFile.length() - 4)) {
@@ -43,7 +60,7 @@ public class CsvFileCreator {
                         line = converter.getCsv(line);
                     }
                     try {
-                        fileWriter.write(line + System.getProperty("line.separator"));
+                        fileWriter.write(trimLine(line) + System.getProperty("line.separator"));
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }

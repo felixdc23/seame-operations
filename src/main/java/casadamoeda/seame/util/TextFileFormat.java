@@ -63,7 +63,7 @@ public class TextFileFormat {
         StringBuilder sb = new StringBuilder();
 
         try (BufferedReader br = new BufferedReader(new FileReader(this.filepath + this.filename))) {
-            String line = br.readLine().strip();
+            String line = br.readLine();
 
             sb.append(line);
 
