@@ -10,8 +10,8 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
 
-        String slipFilename = "boletos-20221007.txt";
-        String salesReportFilename = "faturados-20221114.csv";
+        String slipFilename = "boletos-20221226.txt";
+        String salesReportFilename = "faturados-20221226.csv";
         String dataFolder = "data/";
 
         TextFileFormat fileFormat = new TextFileFormat(dataFolder, slipFilename, 19);
